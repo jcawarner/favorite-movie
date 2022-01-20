@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block section_1 %}
+
+<section class="section about-me" data-section="section1">
+        <div class="container">
+        <div class="top-header">
+        	<img src="{{main_image}}" alt="{{details.tagline}}" />
+        </div>
+          <div class="section-heading">
+            <h2>{{details.title}}</h2>
+            <div class="line-dec"></div>
+            <ul>
+	            <li><h5><strong>{{details.tagline}}</strong></h5></li><br><br>
+	            <li>Year: {{details.year}}</li><br>
+	            <li>Release Date: {{details.release_date}}</li><br>
+	            <li>Rating: {{details.imdb_rating}}</li><br>
+	            <li>Popularity: {{details.popularity}}</li><br>
+	            <li>Runtime: {{details.runtime}} minutes</li><br>
+        	</ul>
+
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+ 
+              <div class="col-md-8">
+                <div class="left-text">
+                  <h4>Summary</h4>
+                  <p>{{details.description}}</p>
+                  <div class="white-button">
+                   <a href="{% url 'save_movie' details.imdb_id %}">Save</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="right-image">
+                  <img src="{{fanart}}" alt="{{details.tagline}}" />
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

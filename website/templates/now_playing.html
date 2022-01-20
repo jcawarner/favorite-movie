@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block section_1 %}
+<section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Gallery</h2>
+            <div class="line-dec"></div>
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label><input type="radio" data-type="*" checked="" name="isotope-filter" />
+                  <span>all</span></label>
+                <label><input type="radio" data-type="pretty" name="isotope-filter" />
+                  <span>Action</span></label>
+                <label><input type="radio" data-type="sexy" name="isotope-filter" />
+                  <span>romance</span></label>
+                <label><input type="radio" data-type="beach" name="isotope-filter" />
+                  <span>thrill</span></label>
+                  <span>all</span></label>
+                  <span>all</span></label>
+                  <span>all</span></label>
+              </form>
+              {% for image,detail in movie %}
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="beach">
+                  <figure class="snip1321">
+                    <img src="{{image}}">
+                    <figcaption>
+                      <a href="{% url 'movie' detail.imdb_id %}"
+                        data-lightbox="image-1"
+                        data-title="Caption"><i class="fa fa-search"></i></a>
+                      <h4>{{detail.title}}</h4>
+                      <span>{{detail.tagline}}</span>             
+                    </figcaption>
+                  </figure>
+                </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+{% endblock %}
+

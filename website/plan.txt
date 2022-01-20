@@ -15,7 +15,7 @@ do a page interaction like other websites ex. thingiverse
 
 dashboard - user logs in and sees their favorite movies - can click on movie and see description and or leave a comment about the movie
 
-search page to search movies
+search page to search movies - could put the search box on the home page
 
 get images of movies and put them on detail page
 
@@ -28,3 +28,6 @@ upcoming movies section
 movies by year section - dropdown list for the years
 
 similar movies -  button on detail movie page that will show a list  of simular movies
+
+shows on netflix
+show on hulu...and the other popular movie watchers

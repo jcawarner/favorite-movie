@@ -40,13 +40,16 @@ https://www.tooplate.com/view/2116-blugoon
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#section2">Features</a></li>
-                <li><a href="#section3">Genre</a></li>
-                <li><a href="#section4">Contact</a></li>
+
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account' %}">Account</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
                 <li><a href="{% url 'register' %}">Register</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'apitest' %}">API TESTING</a></li>
-
+                {% endif %}
+                
+              
               </ul>
             </nav>
             <div class="social-network">
