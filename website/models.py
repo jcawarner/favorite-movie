@@ -8,7 +8,7 @@ class Movie(models.Model):
 	rating = models.FloatField()
 	runtime = models.FloatField()
 	summary = models.CharField(max_length=500)
-	image = models.CharField(max_length=150)
+	image = models.CharField(max_length=150, default=None)
 	user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
 
 	def __str__(self):
